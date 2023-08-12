@@ -1,0 +1,140 @@
+<html>
+    <head><title>calculator</title>
+
+    </head>
+    <body background="https://marketplace.canva.com/EAFHm4JWsu8/1/0/1600w/canva-pink-landscape-desktop-wallpaper-HGxdJA_xIx0.jpg">
+        <style>
+            td{
+                background-color:rgb(153, 137, 245);
+                border: 1px black;
+            }
+            button{
+                background-color: rgb(181, 134, 47);
+                border: seagreen;
+                border-radius: 50px solid;
+                box-shadow: 2px 2px #72ba87;
+                height: 50px;
+                width: 50px;
+                border-bottom-left-radius:  5px; 
+                border-top-right-radius : 5px;
+                color: azure;
+                font-size: 20px;
+            }
+            input{
+                width: 100%;
+                border: 2px solid;
+                height: 50px;
+                background-color: rgb(220, 216, 211);
+            }
+            table{
+                 margin:  100px ; /*--outside margin-->*/
+                 padding: 40px;/*--inside margin-->*/
+               
+            }
+            table,td{
+                border:1px black;
+
+            }
+            body{
+                border: 5px black;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .tab_heading h1{
+                font-weight: 200 ;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            button:hover{
+                
+                background-color: rgb(161, 65, 180);
+                transform: scale(1.04);
+                font-size: 30px;
+                font-weight: 600;
+                transition-delay: 0.3ms;
+            }
+
+            input:hover {
+                 border: 5px solid #c05959;
+                 border-radius: 5px;
+            }
+            input:focus{
+                outline: none;
+                box-shadow: 0px 0px 5px #061721;
+                border-color: #1f4a60;
+                }
+
+              
+
+
+
+
+
+
+
+
+        </style>
+<table border="3px">
+    <tr>
+    <td colspan="3" class="tab_heading"><h1 style align="center"><b>CALCULATOR</b></h1><input type="text" placeholder="enter numbers to calculate" id="calc"  >
+    
+    </td>
+    
+    <td><button style="background-color: rgb(100, 64, 230) ;" onclick="clearkeys()">clear</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addKey('9')">9</button></td>
+        <td><button onclick="addKey('8')">8</button></td> 
+        <td><button onclick="addKey('7')">7</button></td>
+        <td><button onclick="addKey('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addKey('6')">6</button></td>
+        <td><button onclick="addKey('5')">5</button></td> 
+        <td><button onclick="addKey('4')">4</button></td>
+        <td><button onclick="addKey('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addKey('3')">3</button></td>
+        <td><button onclick="addKey('2')">2</button></td> 
+        <td><button onclick="addKey('1')">1</button></td>
+        <td><button onclick="addKey('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addKey('0')">0</button></td>
+        <td><button onclick="addKey('%')">%</button></td> 
+        <td><button onclick="addKey('/')">/</button></td>
+        <td><button onclick="calculate()">=</button></td>
+    </tr>
+</table>
+
+<script>
+
+function calculate(){
+    document.getElementById("calc").value= eval(document.getElementById("calc").value);
+
+}
+
+
+
+function calculate(){
+    
+    var calc=document.getElementById("calc").value;
+    document.getElementById("calc").value = eval(calc);
+}
+    function evaluate1(){
+        console.log("Button clicked");
+    }
+
+    function clearkeys(){
+        console.log(document.getElementById("calc").value);
+        document.getElementById("calc").value="";
+        console.log(document.getElementById("calc").value);
+    }
+
+    function addKey(keyChar){
+        document.getElementById("calc").value +=keyChar;
+    }
+</script>
+
+
+    </body>
+</html>
